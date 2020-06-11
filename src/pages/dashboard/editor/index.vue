@@ -7,9 +7,9 @@
           item
         }}</span>
       </x-pan-thumb>
-      <github-corner
+      <!-- <github-corner
         style="position: absolute; top: 0px; border: 0; right: 0;"
-      />
+      /> -->
       <div class="info-container">
         <span class="display_name">{{ name }}</span>
         <span style="font-size:20px;padding-top:20px;display:inline-block;"
@@ -25,12 +25,9 @@
 
 <script>
 import { mapGetters } from "vuex";
-import PanThumb from "@/components/PanThumb";
-import GithubCorner from "@/components/GithubCorner";
 
 export default {
   name: "DashboardEditor",
-  components: { PanThumb, GithubCorner },
   data() {
     return {
       emptyGif:
