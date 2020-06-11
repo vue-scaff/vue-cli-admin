@@ -6,9 +6,6 @@ import Element from "element-ui";
 import "@/sheet/element-theme.scss";
 import en from "element-ui/lib/locale/lang/en";
 
-// Use Joos
-import joosComponent from "@joos/component-vue";
-
 // Export Useage
 export default (
   // App
@@ -73,8 +70,6 @@ export default (
     size: `medium`,
     locale: en
   });
-
-  Vue.use(joosComponent);
 
   // Runner
   return next(App);
