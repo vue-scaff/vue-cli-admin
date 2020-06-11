@@ -30,8 +30,7 @@ export default {
   name: "DashboardEditor",
   data() {
     return {
-      emptyGif:
-        "https://wpimg.wallstcn.com/0e03b7da-db9e-4819-ba10-9016ddfdaed3"
+      emptyGif: require("@/assets/empty.gif")
     };
   },
   computed: {
