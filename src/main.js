@@ -22,10 +22,22 @@ export default (
   });
 
   subscribe("route", config => {
-    console.log("ROUTE CONFIGURE : ", config);
-
+    // Set Mode
     config.mode = "history";
+
+    // Set Base Route
     config.baseRoute = process.env.publicPath;
+
+    // Guard
+    config.beforeEach = (to, from, next) => {
+      // Check Token
+      if (sessionStorage.getItem("Admin-Token")) {
+        return next();
+      }
+
+      // No Token Redirect Login
+      to.name === "login" ? next() : next({ name: "login" });
+    };
   });
 
   subscribe("store", (config, model) => {

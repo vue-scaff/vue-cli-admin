@@ -28,20 +28,18 @@ export default ({ token }) => {
   };
 
   const actions = {
-    // user login
+    // Code by Joenix
     login({ commit }, userInfo) {
       const { username, password } = userInfo;
+
       return new Promise((resolve, reject) => {
-        login({ username: username.trim(), password: password })
-          .then(response => {
-            const { data } = response;
-            commit("SET_TOKEN", data.token);
-            token.set(data.token);
-            resolve();
-          })
-          .catch(error => {
-            reject(error);
-          });
+        // Pretend to be logged in
+        if (["admin", "editor"].includes(username) && password.length) {
+          commit("SET_TOKEN", "welcome_to_use-vue_scaff_admin");
+          token.set("welcome_to_use-vue_scaff_admin");
+
+          resolve();
+        }
       });
     },
 

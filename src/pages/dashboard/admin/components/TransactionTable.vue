@@ -22,8 +22,8 @@
 
 <script>
 // import { transactionList } from '@/api/remote-search'
-
 export default {
+  mixins: [registry.mixin],
   filters: {
     statusFilter(status) {
       const statusMap = {
@@ -33,7 +33,7 @@ export default {
       return statusMap[status];
     },
     orderNoFilter(str) {
-      return str.substring(0, 30);
+      return (str + "").substring(0, 30);
     }
   },
   data() {
@@ -46,9 +46,7 @@ export default {
   },
   methods: {
     fetchData() {
-      // transactionList().then(response => {
-      //   this.list = response.data.items.slice(0, 8)
-      // })
+      this.list = this.dashboard.list;
     }
   }
 };

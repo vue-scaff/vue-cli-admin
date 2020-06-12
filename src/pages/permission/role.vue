@@ -110,7 +110,7 @@ export default {
     // this.getRoutes();
     // this.getRoles();
 
-    // joenix
+    // Code by Joenix
     this.serviceRoutes = this.$router.options.routes;
     this.routes = this.$router.options.routes;
   },
