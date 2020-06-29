@@ -29,7 +29,7 @@ export default {
   },
   data() {
     return {
-      title: "Vue Scaff Admin",
+      title: process.env.title,
       logo: require("@/assets/logo.png")
     };
   }
