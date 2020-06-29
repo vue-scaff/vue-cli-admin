@@ -4,7 +4,7 @@
     <div class="rightPanel">
       <div
         class="handle-button"
-        :style="{ top: buttonTop + 'px', 'background-color': theme }"
+        :style="{ bottom: buttonBottom + 'px', 'background-color': theme }"
         @click="show = !show"
       >
         <i :class="show ? 'el-icon-close' : 'el-icon-setting'" />
@@ -24,8 +24,8 @@ export default {
       default: false,
       type: Boolean
     },
-    buttonTop: {
-      default: 250,
+    buttonBottom: {
+      default: 100,
       type: Number
     }
   },
