@@ -1,11 +1,11 @@
 const development = {
   // Api Host
-  host: `//test-gateway.jinyi999.cn`
+  host: `//example.path.to`
 };
 
 const production = {
   // Api Host
-  host: `//gateway.jinyi999.cn`
+  host: `//example.path.to`
 };
 
 export default {
